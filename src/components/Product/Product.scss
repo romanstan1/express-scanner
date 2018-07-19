@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700');
+
+$green: #009b4f;
+$darkGreen: #008242;
+$black: #000000;
+$black: rgb(51,51,51);
+$lightGrey: #f4f4f4;
+span.dot {
+  color: red;
+  opacity: 0.8;
+  padding-top: 60px;
+  padding-left: 30px;
+}
+div#Product {
+  margin: 10px;
+  border: 1px solid $lightGrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  color: $black;
+  position: relative;
+  span.close {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    width: 22px;
+    height: 2px;
+    background:rgb(191,191,191);
+    transform: rotate(-45deg);
+    &::after {
+      position: absolute;
+      content:'';
+      top: 0px;
+      right: 0px;
+      width: 22px;
+      height: 2px;
+      background:rgb(191,191,191);
+      transform: rotate(90deg);
+    }
+  }
+  > div {
+    width: 100%;
+  }
+}
+
+div.product-display {
+  height: 140px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 10px 0;
+  div.text {
+    display: inline-block;
+    width: 60%;
+    h3 {
+      font-size: 22px;
+      text-decoration: underline;
+      padding-bottom: 15px;
+    }
+    h4 {
+      font-size: 16px;
+      font-weight: 400;
+      padding-bottom: 5px;
+    }
+    h5 {
+      font-size: 16px;
+      font-weight: 400;
+      span {
+        font-size: 20px;
+        color: $green;
+        font-weight: 700;
+        padding-right: 3px;
+        &::before{
+          content: '£'
+        }
+      }
+    }
+
+  }
+  div.image {
+    display: inline-block;
+    // background: grey;
+    width: 40%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+div.ss-button {
+  background: $green;
+  color: white;
+  line-height: 68px;
+  font-weight: 600;
+  font-size: 20px;
+  border: 1px solid $darkGreen;
+  width: 100%;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+div.rx-input {
+  // background: grey;
+  div.enter {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  > div {
+    line-height: 30px;
+    &.title {
+      display: flex;
+      justify-content:flex-end;
+      span {
+        width: 33.3%;
+        display: inline-block;
+        font-weight: 700;
+      }
+    }
+    &.title-buttons {
+      display: flex;
+      justify-content:flex-end;
+      span {
+        height: 50px;
+        line-height: 50px;
+        background: $green;
+        margin: 5px 2px;
+        width: 33.3%;
+        display: inline-block;
+        font-weight: 600;
+        color: white;
+        // border: 1px solid $darkGreen;
+        cursor: pointer;
+      }
+    }
+    &.quantity {
+      line-height: 30px;
+      border-bottom: 0px solid $lightGrey;
+    }
+    &.row {
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-top: 2px solid $lightGrey;
+      > span {
+        width: 33.3%;
+        display: block;
+        line-height: 40px;
+        position: relative;
+        // background: blue;
+        // height: 40px;
+        // padding-bottom: 2px;
+        // opacity: 0.5;
+        overflow: hidden;
+        &.title {
+          // padding-top: 2px;
+          font-weight: 700;
+        }
+        span.active {
+          height: 20px;
+          width: 20px;
+          background: $green;
+          position: absolute;
+          right: 24px;
+          border-radius: 20px;
+          top: 11px;
+          font-size: 13px;
+          color: white;
+          line-height: 20px;
+          padding: 1px 0 2px 5px;
+        }
+        input {
+          line-height: 40px;
+          border: 0px;
+          width: calc(100% - 8px);
+          // background: grey;
+          font-size: 14px;
+          text-align: center;
+          outline: 2px solid white;
+          &:focus {
+            text-align: left;
+            outline: 2px solid $green;
+            text-indent: 10px;
+            &::placeholder {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+div.totals {
+  margin-top: 30px;
+  > div {
+    line-height: 30px;
+    &.row {
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 2px solid $lightGrey;
+      span {
+        width: 33.3%;
+        display: block;
+        line-height: 40px;
+        // background: blue;
+        // height: 40px;
+        padding-bottom: 2px;
+        &.title {
+          font-weight: 700;
+        }
+        &.value {
+          font-weight: 700;
+          color: $green;
+          text-align: right;
+          padding-right: 10px;
+          &::before{
+            content: '£'
+          }
+        }
+      }
+      &.total {
+        font-size: 20px;
+        span {
+          line-height: 60px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+p.bottom-text {
+  line-height: 180%;
+}
+
+
+div.reset {
+  padding-top: 20px;
+  margin: 30px;
+  text-align: left;
+  color: navy;
+  font-size: 12px;
+}

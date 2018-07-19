@@ -1,0 +1,205 @@
+// @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700');
+
+$green: #009b4f;
+$black: #000000;
+$lightGrey: #f4f4f4;
+$darkGreen: #008242;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-width: 1px;
+}
+
+body {
+  // font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  div#root {
+    height: 100%;
+    > div {
+      height: 100%;
+    }
+  }
+}
+
+div#Home {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  // justify-content: center;
+  align-items: center;
+  >span {
+    width: 100%;
+    background: $lightGrey;
+    height: calc(100%);
+    h2 {
+      // text-align:center;
+      margin: 30px 15px;
+      font-size: 22px;
+      color: $black;
+      font-weight: normal;
+    }
+    h3 {
+      // text-align:center;
+      margin: 0px 15px;
+      font-size: 16px;
+      color: $black;
+      font-weight: normal;
+    }
+    div.card {
+      background: white;
+      margin: 15px 15px;
+      padding-top: 1px;
+      h4 {
+        font-weight: 400;
+        padding: 10px;
+      }
+    }
+  }
+
+}
+
+div.button {
+  cursor: pointer;
+  margin: 10px;
+  padding: 20px 25px;
+  border: 0px solid #195fd1;
+  text-align: center;
+  background: $green;
+  color: white;
+  &:hover {
+    background: $darkGreen;
+  }
+}
+
+
+div.camera-wrapper {
+  background: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  div#interactive {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    video {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      // right: 5px;
+      // bottom: 100px;
+      width: 100%;
+      // height: 100%;
+      // margin: 0px 10px;
+    }
+  }
+  div.cancel-button {
+    position: absolute;
+    bottom: 25px;
+    width: 110px;
+    padding: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    // text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    z-index: 100;
+    font-family: sans-serif;
+    font-weight: lighter;
+    &.reroute {
+      font-size: 13px;
+      right: 10px;
+      color: black;
+    }
+    &.scan-pres {
+      font-size: 13px;
+      right: 130px;
+      color: black;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+div.overlayMessage {
+  position: absolute;
+  color: white;
+  text-align: center;
+  width: 100%;
+  top:15px;
+  font-weight: bold;
+  font-family: sans-serif;
+  // text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+  h3 {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+}
+
+// div#Product {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100%;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   div.product-display {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     padding-bottom: 50px;
+//     h2 {
+//       font-size: 20px;
+//     }
+//     a {
+//       color: blue;
+//     }
+//     img {
+//       display: block;
+//       height: 200px;
+//     }
+//   }
+// }
+
+// div.rx-details {
+//   padding-top: 10px;
+//   div {
+//     span {
+//       padding: 10px 5px;
+//       width: 80px;
+//       display: inline-block;
+//       border: 1px solid #195fd1;
+//     }
+//   }
+// }
+span.barcode {
+  font-size: 12px;
+  color: grey;
+}

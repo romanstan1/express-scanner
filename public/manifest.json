@@ -1,0 +1,17 @@
+{
+  "short_name": "Specsavers",
+  "name": "Specsavers Contact Lenses",
+  "icons": [
+    {
+      "src":"fav.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation":"portrait"
+
+}
